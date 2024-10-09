@@ -1,5 +1,8 @@
 package cleancode.minesweeper.asis;
 
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.Random;
 import java.util.Scanner;
 
