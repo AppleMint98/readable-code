@@ -1,13 +1,13 @@
 package cleancode.studycafe.mission.mission7.io;
 
 import cleancode.studycafe.mission.mission7.exception.AppException;
-import cleancode.studycafe.mission.mission7.model.StudyCafePass;
-import cleancode.studycafe.mission.mission7.model.StudyCafePassType;
+import cleancode.studycafe.mission.mission7.model.pass.StudyCafePassType;
+import cleancode.studycafe.mission.mission7.model.pass.StudyCafeSeatPass;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class ConsoleInputHandler {
+public class InputHandler {
 
     private static final Scanner SCANNER = new Scanner(System.in);
 
@@ -26,7 +26,7 @@ public class ConsoleInputHandler {
         throw new AppException("잘못된 입력입니다.");
     }
 
-    public StudyCafePass getSelectPass(List<StudyCafePass> passes) {
+    public StudyCafeSeatPass getSelectPass(List<StudyCafeSeatPass> passes) {
         String userInput = SCANNER.nextLine();
         int selectedIndex = Integer.parseInt(userInput) - 1;
         return passes.get(selectedIndex);
